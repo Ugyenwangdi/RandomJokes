@@ -4,6 +4,8 @@ const https = require("https");
 
 const app = express();
 app.set('view engine', 'ejs');
+
+require('dotenv').config()
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
@@ -67,7 +69,7 @@ app.post("/", function(req, res){
 })
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT, function(){
     console.log("Server started running on port 3000...");
 })
 
