@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Jokes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <span class="brand">Random Jokes</span>
+    </header>
+
+    <section>
+        <h1 id="welcome">👋🏻 Let's laugh it out today!</h1>
+
+        <div class="input">
+            
+            <form action="/" method="post">
+                
+                <div class="categories">                    
+                    <h1 class="title">Select Category / Categories</h1>
+
+                    <input type="checkbox" name="category" id="Programming" value="Programming" checked>
+                    <label for="Programming">Programming</label>
+
+                    <input type="checkbox" name="category" id="Miscellaneous" value="Miscellaneous" >
+                    <label for="Miscellaneous">Miscellaneous</label>
+
+                    <input type="checkbox" name="category" id="Dark" value="Dark" >
+                    <label for="Dark">Dark</label>
+
+                    <input type="checkbox" name="category" id="Pun" value="Pun" >
+                    <label for="Pun">Pun</label>
+
+                    <input type="checkbox" name="category" id="Spooky" value="Spooky" >
+                    <label for="Spooky">Spooky</label>
+
+                    <input type="checkbox" name="category" id="Christmas" value="Christmas" >
+                    <label for="Christmas">Christmas</label>
+                </div>
+
+                <div class="flags">                    
+                    <h3 class="title">Choose flags to blacklist</h3>
+
+                    <input type="checkbox" name="flag" id="nsfw" value="nsfw" >
+                    <label for="nsfw">nsfw</label>
+
+                    <input type="checkbox" name="flag" id="religious" value="religious" >
+                    <label for="religious">religious</label>
+
+                    <input type="checkbox" name="flag" id="political" value="political" >
+                    <label for="political">political</label>
+
+                    <input type="checkbox" name="flag" id="racist" value="racist" checked>
+                    <label for="racist">racist</label>
+
+                    <input type="checkbox" name="flag" id="sexist" value="sexist" >
+                    <label for="sexist">sexist</label>
+
+                    <input type="checkbox" name="flag" id="explicit" value="explicit" >
+                    <label for="explicit">explicit</label>                    
+                </div>
+
+                <div class="types">                    
+                    <h3 class="title">Select joke type</h3>
+
+                    <input type="radio" name="type" id="single" value="single" checked>
+                    <label for="single">single</label>
+
+                    <input type="radio" name="type" id="twopart" value="twopart">
+                    <label for="twopart">twopart</label>                  
+                </div>
+                
+                <button type="submit">Get Joke</button>
+            </form>
+        </div>
+    </section>  
+    
+    <section class="jokes">
+        <div class="item">
+            <% for (var i = 0; i < jokes.length; i++) { %>                
+                <p><%= jokes[i] %></p>                        
+            <% } %>
+        </div>   
+    </section>
+
+    <footer>Made with 💚 by Wulfi</footer>
+    
+</body>
+</html>
